@@ -1,0 +1,9 @@
+- name: install pipewire
+  pacman:
+    name: pipewire
+    state: present
+
+- name: install pipewire pulse
+  pacman:
+    name: pipewire-pulse
+    state: present

@@ -1,0 +1,34 @@
+- name: install sway
+  pacman:
+    name: sway
+    state: present
+
+- name: install bemenu
+  pacman:
+    name: bemenu-wayland
+    state: present
+
+- name: install bemenu
+  pacman:
+    name: bemenu-wayland
+    state: present
+
+- name: install swayidle
+  pacman:
+    name: swayidle
+    state: present
+
+- name: install swaylock
+  pacman:
+    name: swaylock
+    state: present
+
+- name: install brightnessctl
+  pacman:
+    name: brightnessctl
+    state: present
+
+- name: install i3status-rust
+  pacman:
+    name: i3status-rust
+    state: present

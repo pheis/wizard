@@ -3,4 +3,7 @@
   roles:
     - caps2esc
     - fonts
+    - bluetooth
+    - audio
+    - sway
     - browsers
