@@ -1,0 +1,44 @@
+- name: install zsh
+  pacman:
+    name: zsh,zsh-completions,zsh-autosuggestions,zsh-syntax-highlighting
+    state: present
+
+- name: install starship
+  pacman:
+    name: starship
+    state: present
+
+- name: install js pkg mans
+  pacman:
+    name: yarn,npm
+    state: present
+
+- name: install tmux
+  pacman:
+    name: tmux
+    state: present
+
+- name: install new age tools
+  pacman:
+    name: ripgrep,exa,bat
+    state: present
+
+- name: install git
+  pacman:
+    name: git
+    state: present
+
+- name: install rustup
+  pacman:
+    name: rustup
+    state: present
+
+- name: pass
+  pacman:
+    name: pass
+    state: present
+
+- name: pkgfile
+  pacman:
+    name: pkgfile
+    state: present
