@@ -1,0 +1,9 @@
+- name: ttf font
+  pacman:
+    name: ttf-dejavu,ttf-fira-mono,otf-fira-mono
+    state: present
+
+- name: icon fonts
+  pacman:
+    name: ttf-font-awesome
+    state: present
