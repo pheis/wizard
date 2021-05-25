@@ -1,0 +1,23 @@
+- name: install interception-tools
+  pacman:
+    name: interception-tools,interception-caps2esc
+    state: present
+
+- name: Enable udevmon service
+  ansible.builtin.systemd:
+    name: udevmon
+    enabled: yes
+
+- name: Restart udevmon service
+  ansible.builtin.systemd:
+    name: udevmon
+    state: restarted
+
+- name: configure udevmon
+  copy:
+    src: udevmon.yaml
+    dest: /etc/interception/udevmon.yaml
+    owner: root
+    group: root
+    mode: 0644
+    notify: restart udevmon
