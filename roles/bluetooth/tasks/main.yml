@@ -20,5 +20,5 @@
 
 - name: start bluetooth service
   ansible.builtin.systemd:
-    name: udevmon
+    name: bluetooth
     state: started
