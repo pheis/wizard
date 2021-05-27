@@ -62,3 +62,8 @@
   ansible.builtin.systemd:
     name: docker
     state: started
+
+- name: install fzf
+  pacman:
+    name: fzf
+    state: present
