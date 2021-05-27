@@ -1,0 +1,8 @@
+- name: configure faillock
+  copy:
+    src: faillock.conf
+    dest: /etc/security/faillock.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
