@@ -8,6 +8,11 @@
     name: starship
     state: present
 
+- name: install stow
+  pacman:
+    name: stow
+    state: present
+
 - name: install js pkg mans
   pacman:
     name: yarn,npm
@@ -28,9 +33,9 @@
     name: git
     state: present
 
-- name: install rustup
+- name: install rust
   pacman:
-    name: rustup
+    name: rust,cargo
     state: present
 
 - name: pass
@@ -42,3 +47,18 @@
   pacman:
     name: pkgfile
     state: present
+
+- name: docker
+  pacman:
+    name: docker,docker-compose
+    state: present
+
+- name: Enable docker service
+  ansible.builtin.systemd:
+    name: docker
+    enabled: yes
+
+- name: start docker service
+  ansible.builtin.systemd:
+    name: docker
+    state: started
