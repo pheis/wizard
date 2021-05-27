@@ -1,9 +1,12 @@
 - hosts: localhost
   become: yes
   roles:
+    - core
     - caps2esc
     - fonts
+    - laptop
     - bluetooth
     - audio
+    - shell
     - sway
     - browsers
