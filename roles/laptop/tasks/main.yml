@@ -1,0 +1,34 @@
+# Is this needed?
+- name: install acpi_call
+  pacman:
+    name: acpi_call
+    state: present
+
+- name: install ethtool
+  pacman:
+    name: ethtool
+    state: present
+
+- name: install tlp
+  pacman:
+    name: tlp
+    state: present
+
+- name: Enable tlp service
+  ansible.builtin.systemd:
+    name: tlp
+    enabled: yes
+
+- name: start tlp service
+  ansible.builtin.systemd:
+    name: tlp
+    state: started
+
+- name: configure tlp
+  copy:
+    src: tlp.conf
+    dest: /etc/tlp.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
