@@ -32,3 +32,8 @@
   pacman:
     name: i3status-rust
     state: present
+
+- name: desktop portal
+  pacman:
+    name: xdg-desktop-portal-wlr
+    state: present

@@ -13,6 +13,15 @@
     name: blueman
     state: present
 
+- name: configure bluetooth
+  copy:
+    src: main.conf
+    dest: /etc/bluetooth/main.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
 - name: Enable bluetooth service
   ansible.builtin.systemd:
     name: bluetooth
