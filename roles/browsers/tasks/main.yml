@@ -2,3 +2,13 @@
   pacman:
     name: firefox
     state: present
+
+- name: install chromium
+  pacman:
+    name: chromium
+    state: present
+
+- name: install thunderbird
+  pacman:
+    name: thunderbird
+    state: present

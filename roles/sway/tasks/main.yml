@@ -37,3 +37,18 @@
   pacman:
     name: xdg-desktop-portal-wlr
     state: present
+
+- name: alacritty
+  pacman:
+    name: alacritty
+    state: present
+
+- name: kanshi
+  pacman:
+    name: kanshi
+    state: present
+
+- name: wl-clipboard
+  pacman:
+    name: wl-clipboard
+    state: present

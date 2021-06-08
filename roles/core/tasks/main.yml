@@ -6,3 +6,8 @@
     group: root
     mode: 0644
     backup: yes
+
+- name: install openssh
+  pacman:
+    name: openssh
+    state: present
